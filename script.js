@@ -109,15 +109,22 @@ showCompleted.addEventListener('click', function () {
   });
 
    //ira criar uma div-container para alertar o usuario
-  if (!isChecked) {  // se nenhum checkbox estiver marcado
-    let divContainer = document.createElement('div');
-    divContainer.className = 'div-container';
-    divContainer.id = 'remove-container';
-    let p = document.createElement('p');
-    p.textContent = "you don't have any tasks completed";
-    divContainer.appendChild(p);
-    conteudo.appendChild(divContainer);
-  }
+   let divContainer = document.getElementById('remove-container');
+   if (!isChecked) {
+     if (divContainer) {
+       let p = divContainer.querySelector('p');
+       p.textContent = "you don't have any tasks completed"; 
+     } else {
+       divContainer = document.createElement('div');
+       divContainer.className = 'div-container';
+       divContainer.id = 'remove-container';
+       let p = document.createElement('p');
+       p.textContent = "you don't have any tasks completed";
+       divContainer.appendChild(p);
+       conteudo.appendChild(divContainer);
+     }
+     return;
+   }
 
 
 });
@@ -147,13 +154,14 @@ showActive.addEventListener('click',function() {
   let divContainers = [...document.querySelectorAll('#id-container')]; //transformos os minhas div's em array
   let total = document.getElementById('total-todo');
   let soma = 0;
-
+  let divRemove = document.getElementById('remove-container');
   inputs.map((inputMap , i) =>{ //metodo map passando o elemento e o index
     if (!inputMap.checked) { //se o input não estiver marcado
       divContainers[i].style.display = 'flex';
+      
       soma++;
       total.textContent = soma + ' items';
-      
+      divRemove.style.display = 'none';
     } else {
       divContainers[i].style.display = 'none';
     }
