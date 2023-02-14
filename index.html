@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <script
+    src="https://kit.fontawesome.com/0efc108669.js"
+    crossorigin="anonymous"
+  ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./images/bg-desktop-dark.jpg"
+        alt="background of to do app"
+        class="img-header"
+      />
+
+      <div class="header-container">
+        <h2 class="todo-tittle">T O D O</h2>
+        <img src="./images/icon-sun.svg" alt="sun" id="switch"/>
+      </div>
+
+      <div class="container-input">
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          id="input-todo"
+          class="input-todo"
+        />
+      </div>
+
+    </header>
+
+    <div class="conteudo hide" id="tasks-div">
+      <div class="div-container">
+      </div>
+    </div>
+
+  <div class="container-information">
+      <span id="total-todo">0 items</span>
+      <div class="container-functions">
+        <span id="showall">All</span>
+        <span id="showActive">Active</span>
+        <span id="showCompleted">Completed</span>
+      </div>
+      <span class="clear-todo" id="clear-todo">Clear All List</span>
+  </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Marcos Bueno</a>.
+    </div>
+  </body>
+</html>
