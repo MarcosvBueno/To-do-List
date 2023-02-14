@@ -155,13 +155,16 @@ showActive.addEventListener('click',function() {
   let total = document.getElementById('total-todo');
   let soma = 0;
   let divRemove = document.getElementById('remove-container');
+  const exist = document.body.contains(divRemove);
   inputs.map((inputMap , i) =>{ //metodo map passando o elemento e o index
     if (!inputMap.checked) { //se o input não estiver marcado
       divContainers[i].style.display = 'flex';
-      
+      if(exist){
+        divRemove.style.display = 'none';
+      }
       soma++;
       total.textContent = soma + ' items';
-      divRemove.style.display = 'none';
+      
     } else {
       divContainers[i].style.display = 'none';
     }
