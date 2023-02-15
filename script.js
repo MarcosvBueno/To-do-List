@@ -6,7 +6,7 @@ document.addEventListener('keyup', function addTodoTask(e) {
 
   if (e.key === 'Enter') {
 
-    if(inputTodo === ''){
+    if(inputTodo.trim() === ""){
       alert('please enter some task');
       return;
     }
