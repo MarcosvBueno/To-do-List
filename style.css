@@ -140,6 +140,23 @@ body{
   transition: 0.4s ease-in-out;
 }
 
+.icon{
+  display: flex;
+  justify-content: flex-end;
+  width: 500px;
+  align-items: end;
+  text-align: end;
+}
+
+.hide-icon{
+  display: none;
+}
+
+.icon:hover{
+  color: rgb(246, 111, 111);
+  transition: 0.4s ease-in-out;
+}
+
 #clear-todo:hover{
   color: var(--blue-clear-todo);
   transition: 0.4s ease-in-out;
