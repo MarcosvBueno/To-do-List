@@ -142,7 +142,7 @@ showCompleted.addEventListener('click', function () {
 
    //ira criar uma div-container para alertar o usuario
    let divContainer = document.getElementById('remove-container');
-   if (!isChecked) {
+   if (!isChecked) {// = false
      if (divContainer) {
        let p = divContainer.querySelector('p');
        p.textContent = "you don't have any tasks completed"; 
@@ -196,7 +196,7 @@ showActive.addEventListener('click',function() {
 
   const exist = document.body.contains(divRemove);
 
-  inputs.map((inputMap , i) =>{ //metodo map passando o elemento e o index
+  inputs.map((inputMap , i) =>{ // metodo map passando o elemento e o index
     if (!inputMap.checked) { //se o input não estiver marcado
       divContainers[i].style.display = 'flex';
       total.textContent = divContainers.length + " Items";
@@ -220,9 +220,9 @@ showActive.addEventListener('click',function() {
 function deleteTask(el) {
   let container = el.closest('.div-container');
   let p = container.querySelector('p');
-  let index = tasks.indexOf(p.textContent);
+  let index = tasks.indexOf(p.textContent);// pega o index do texto da tarefa
   tasks.splice(index, 1); // Remove a tarefa correspondente do array tasks
-  container.remove();
+  container.remove();//exclui o container (div-container)
 
   let totalTodo = document.getElementById('total-todo');
   totalTodo.textContent = tasks.length + ' items';

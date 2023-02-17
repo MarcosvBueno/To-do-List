@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
 }
 
-:root{
+:root {
   --Very-Dark-Blue: hsl(235, 21%, 11%);
   --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
   --Light-Grayish-Blue-grey: hsl(234, 39%, 85%);
@@ -13,27 +13,25 @@
   --Dark-Grayish-Blue: hsl(234, 11%, 52%);
   --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
   --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
-  --blue-clear-todo:  hsl(220, 98%, 61%);
+  --blue-clear-todo: hsl(220, 98%, 61%);
 }
 
-
-body{
+body {
   background-color: var(--Very-Dark-Blue);
-  Font-size: 18px;
+  font-size: 18px;
 }
-
 
 /*------------------- header -------------------*/
 
-.img-header{
+.img-header {
   width: 1440px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin: auto;
 }
 
-.header-container{
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,15 +39,15 @@ body{
   width: 500px;
   margin: 0 auto;
   position: relative;
- bottom: 200px;
+  bottom: 200px;
 }
 
-.todo-tittle{
+.todo-tittle {
   font-weight: bold;
   color: var(--Light-Grayish-Blue);
 }
 
-.container-input{
+.container-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +58,7 @@ body{
   bottom: 150px;
 }
 
-.input-todo{
+.input-todo {
   outline: none;
   padding: 25px;
   width: 500px;
@@ -71,12 +69,10 @@ body{
   font-size: 16px;
 }
 
-
-
 /*--------------------- Inputs --------------------*/
 
-.conteudo{
-  background-color: var(--Very-Dark-Desaturated-Blue); 
+.conteudo {
+  background-color: var(--Very-Dark-Desaturated-Blue);
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -86,61 +82,58 @@ body{
   border-radius: 5px;
   position: relative;
   bottom: 130px;
-
-
 }
 
-.hide{
- display: none;
+.hide {
+  display: none;
 }
 
-.div-container{
+.div-container {
   display: flex;
   align-items: center;
   padding: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-} 
+}
 
 .div-container:not(:first-child) {
   border-top: 1px solid var(--Dark-Grayish-Blue);
   width: 100%;
 }
 
-.input-group{
+.input-group {
   margin-right: 10px;
 }
 
-
-.container-information{
+.container-information {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  width: 500px ;
+  width: 500px;
   background-color: var(--Very-Dark-Desaturated-Blue);
   padding: 20px;
   color: var(--Light-Grayish-Blue-grey);
-  
+
   position: relative;
   bottom: 130px;
   border-top: 1px solid var(--Dark-Grayish-Blue);
   font-size: 15px;
 }
 
-.container-functions span{
+.container-functions span {
   margin-right: 4px;
   font-size: 15px;
   cursor: pointer;
 }
 
-.container-functions span:hover{
+.container-functions span:hover {
   color: var(--blue-clear-todo);
   transition: 0.4s ease-in-out;
 }
 
-.icon{
+.icon {
   display: flex;
   justify-content: flex-end;
   width: 500px;
@@ -148,23 +141,77 @@ body{
   text-align: end;
 }
 
-.hide-icon{
+.hide-icon {
   display: none;
 }
 
-.icon:hover{
+.icon:hover {
   color: rgb(246, 111, 111);
   transition: 0.4s ease-in-out;
 }
 
-#clear-todo:hover{
+#clear-todo:hover {
   color: var(--blue-clear-todo);
   transition: 0.4s ease-in-out;
   cursor: pointer;
 }
 
-
 /*-------------------- Footer --------------------*/
-.attribution{margin-top: 100px;}
-.attribution { font-size: 11px; text-align: center;color: var(--Light-Grayish-Blue); }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  margin-top: 100px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--Light-Grayish-Blue);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ------------------- Responsividade ------------------- */
+
+@media (max-width: 475px) {
+  .header-container {
+    bottom: 0;
+    width: 100vw;
+  }
+
+  .img-header {
+    width: 100vw;
+    height: 280px;
+  }
+
+  .todo-tittle {
+    position: relative;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .container-input {
+    width: 95%;
+  }
+
+  .input-todo {
+    font-size: 18px;
+  }
+
+  .conteudo {
+    width: 98%;
+  }
+
+  #switch {
+    display: none;
+  }
+
+  .container-information {
+    width: 98%;
+  }
+
+  .attribution {
+    margin-top: -40px;
+  }
+}
