@@ -195,6 +195,11 @@ body {
     width: 95%;
   }
 
+  .div-container input {
+    min-width: 20px;
+    min-height: 20px;
+  }
+
   .input-todo {
     font-size: 18px;
   }
@@ -213,5 +218,9 @@ body {
 
   .attribution {
     margin-top: -40px;
+  }
+  .input-group {
+    margin-right: 10px;
+    
   }
 }
