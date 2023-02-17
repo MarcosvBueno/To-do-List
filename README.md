@@ -1,5 +1,5 @@
 <h1>To-do-List 📆</h1>
-<img src="https://user-images.githubusercontent.com/104960654/218861242-83380276-c441-49ac-9f68-5cac3e1fe509.png">
+<img src="https://user-images.githubusercontent.com/104960654/219538117-129e9f8a-5a1d-4e3f-8115-8099d8a42935.png">
 
 ## 🚀 | Tecnologias:
 Esse projeto foi desenvolvido com as seguintes tecnologias:
