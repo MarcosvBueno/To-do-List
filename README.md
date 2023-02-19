@@ -11,6 +11,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <li>spread Operator</li>
 <li>Arrow Function</li>
 <li>Map Function</li>
+<li>LocalStorage</li>
 <li>DOM</li>
 <li>Event Listeners</li>
 </ul>
